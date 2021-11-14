@@ -15,8 +15,8 @@ const Show = (props) => {
     // useEffect to set state to the existing bookmark, when the data is available
     useEffect(() => {
         if (props.bookmarks) {
-            const bookmarks = bookmarks.find((b) => b._id === id);
-            setEditForm(bookmarks)
+            const mark = bookmarks.find((b) => b._id === id);
+            setEditForm(mark)
         }
     }, [props.bookmarks])
 
