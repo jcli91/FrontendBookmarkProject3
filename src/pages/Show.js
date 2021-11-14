@@ -8,11 +8,11 @@ const Show = (props) => {
     const params = useParams();
     // grab the id from params
     const id = params.id;
-    // grab people from props
+    // grab bookmarks from props
     const bookmarks = props.bookmarks;
     // create state for form
     const [editForm, setEditForm] = useState({})
-    // useEffect to set state to the existing person, when the data is available
+    // useEffect to set state to the existing bookmark, when the data is available
     useEffect(() => {
         if (props.bookmarks) {
             const bookmarks = bookmarks.find((b) => b._id === id);
@@ -21,7 +21,7 @@ const Show = (props) => {
     }, [props.bookmarks])
 
     if (props.bookmarks) {
-        // grab the target person from the people array
+        // grab the target mark from the bookmarks array
         const mark = bookmarks.find((b) => b._id === id);
 
         // handleChange function for form
@@ -37,13 +37,13 @@ const Show = (props) => {
         const handleSubmit = (event) => {
             // prevent refresh
             event.preventDefault()
-            // pass the form data to updatePeople
+            // pass the form data to updateBookmarks
             props.updateBookmarks(editForm, mark._id)
-            // redirect people back to index
+            // redirect bookmarks back to index
             navigate("/")
 
         }
-        // delete person
+        // delete bookmark
         const removeMark = () => {
             props.deleteBookmarks(mark._id)
             navigate("/")
