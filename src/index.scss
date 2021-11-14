@@ -1,14 +1,14 @@
-$red: #720026;
-$orange: #DD6031;
-$darkblue: #18314F;
-$cream: #EFD5C3;
+$navy: #464D77;
+$green: #36827F;
+$yellow: #F9DB6D;
+$cream: #F4EDED;
 
-@mixin mainFont($weight) {
-  font-family: 'Open Sans', sans-serif;;
-  font-weight: $weight;
-}
+// @mixin mainFont($weight) {
+//   font-family: 'Open Sans', sans-serif;;
+//   font-weight: $weight;
+// }
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 h2 {
   padding: 0;
@@ -17,11 +17,11 @@ h2 {
 
 form {
   display: flex;
-  justify-content: space-between;
+  margin: .5em auto;
 }
 
 nav {
-  background-color: $orange;
+  // background-color: $orange;
   width: 100%;
 }
 
@@ -30,51 +30,131 @@ nav {
   justify-content: center;
 }
 
+// @media (min-width: 600px) {
+//   .App {
+//     width: 50%
+//   }
+// }
+
+body {
+  height: 100%;
+  color: rgb(0, 0, 0)
+}
+
 .App {
   width: 70%;
   display: flex;
   flex-direction: column;
-
   margin: 0em;
+  max-width: 600px;
 }
 
-body {
+.linkBox {
+  width: 100%;
+  height: 100%;
+}
+
+html {
   background-color: $cream;
 }
 
-#textDec {
-  text-decoration: none;
+.edit:hover {
+  transition: 250ms;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+
+.mark {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2em auto;
+}
+
+.mark:hover {
+  background-color: $green;
+  transition: 250ms;
+  color: white;
+  transform: scale(1.05);
 }
 
 #titleLink {
-  font-size: 1.5em;
-  color: white;
-  text-decoration: none !important;
-  @include mainFont(900)
+  font-size: 2em;
+  color: $navy;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.116);
 }
 
-.loading {
-  border: 2px solid blue;
-  height: 50px;
-  width: 10%;
-  transition: 500ms;
-  animation-name: loading;
-  animation-iteration-count: infinite;
-  animation-duration: 2s;
+#titleLink:hover {
+  transition: 250ms;
+  transform: scale(1.05);
 }
 
-@keyframes loading {
-  0% {
-    transform: translateX(0px);
-    width: 10%;
-  }
-  50% {
-    transform: translateX(100px);
-    width: 50%;
-  }
-  100% {
-    transform: translateX(0px);
-    width: 10%;
-  }
+form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between
+}
+
+.submit {
+  background-color: $cream;
+  color: rgb(0, 0, 0);
+}
+
+.submit:hover {
+  transition: 250ms;
+  transform: scale(1.05);
+  cursor: pointer;
+  background-color: rgba(155, 155, 155, 0.123);
+}
+
+input {
+  margin: 2px
+}
+
+.box {
+  background-color: $cream 
+}
+
+a {
+  color: #18314F
+}
+
+
+
+// body {
+//   background-color: $cream;
+// }
+
+// #textDec {
+//   text-decoration: none;
+// }
+
+// .loading {
+//   border: 2px solid blue;
+//   height: 50px;
+//   width: 10%;
+//   transition: 500ms;
+//   animation-name: loading;
+//   animation-iteration-count: infinite;
+//   animation-duration: 2s;
+// }
+
+// @keyframes loading {
+//   0% {
+//     transform: translateX(0px);
+//     width: 10%;
+//   }
+//   50% {
+//     transform: translateX(100px);
+//     width: 50%;
+//   }
+//   100% {
+//     transform: translateX(0px);
+//     width: 10%;
+//   }
   
-}
+// }
+
+
+
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";

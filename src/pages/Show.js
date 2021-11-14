@@ -56,6 +56,7 @@ const Show = (props) => {
                 name="name"
                 placeholder="name"
                 onChange={handleChange}
+                className="input"
                 />
                 <input
                 type="text"
@@ -63,13 +64,14 @@ const Show = (props) => {
                 name="url"
                 placeholder="URL"
                 onChange={handleChange}
+                className="input"
                 />
-                 <input type="submit" value="Update Bookmark"/>
+                 <input type="submit" value="Update Bookmark" className="input"/>
             </form>
             );
 
             return (
-                <div className="mark">
+                <div className="mark showMark">
                   <h1>{mark.name}</h1>
                   <h2>{mark.url}</h2>
                   {form}

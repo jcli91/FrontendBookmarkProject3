@@ -40,7 +40,8 @@ const Index = (props) => {
                 value={newForm.name}
                 name="name"
                 placeholder="Name"
-                onChange={handleChange}
+                onChange={handleChange} 
+                className="input"
             />
             <input
                 type="text"
@@ -48,9 +49,10 @@ const Index = (props) => {
                 name="url"
                 placeholder="URL"
                 onChange={handleChange}
+                className="input"
             />
 
-            <input type="submit" value="Bookmark Website" />
+            <input type="submit" value="Bookmark Website" className="input submit"/>
         </form>
     );
 
@@ -60,14 +62,18 @@ const Index = (props) => {
                 {form}
                 {props.bookmarks.map((mark) => {
                     return (
-                        <div key={mark._id} className="mark">
-                            {/* <h1>{mark.name}</h1> */}
-                            <a href={mark.url}>{mark.name}</a>
+                        <a href={mark.url}> 
+                        <div key={mark._id} className="mark box">
+                                <div className="linkBox"> 
+                                    {mark.name} 
+                                </div>
+                          
                             <Link to={`/bookmarks/${mark._id}`}>
-                                <button>Edit</button>
+                                <button  className="input edit">Edit</button>
                             </Link>
                             
                         </div>
+                          </a>
                     );
                 })}
             </section>
