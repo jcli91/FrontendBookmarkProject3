@@ -74,7 +74,8 @@ const Index = (props) => {
         return (
           <section>
             {form}
-            <h1>Loading...</h1>
+            <div className="loading"></div>
+            <h1>cum...</h1>
           </section>
         );
       }
