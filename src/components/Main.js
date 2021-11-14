@@ -5,13 +5,13 @@ import Show from '../pages/Show'
 
 const Main = (props) => {
 
-    // state to hold our list of people
+    // state to hold our list of bookmarks
     const [bookmarks, setBookmarks] = useState(null);
 
     // your deployed heroku url
-    const URL = "https://rb-sp-jl-bookmark.herokuapp.com/bookmark/"
+    const URL = "https://rb-sp-jl-bookmark.herokuapp.com/bookmarks/"
 
-    // function to get updated list of people
+    // function to get updated list of bookmarks
     const getBookmarks = async () => {
         // make the api call
         const response = await fetch(URL)
@@ -22,7 +22,7 @@ const Main = (props) => {
     }
 
     // function that will later be passed data from our new/create form and make the post
-    // request to make a new person
+    // request to make a new bookmark
 
     const createBookmarks = async (mark) => {
         // make the post request to our API
@@ -33,11 +33,11 @@ const Main = (props) => {
             },
             body: JSON.stringify(mark)
         })
-        // get the updated list of people
+        // get the updated list of bookmark
         getBookmarks()
     }
 
-    // function to update a person
+    // function to update a bookmark
     const updateBookmarks = async (mark, id) => {
         // make the put request
         await fetch(URL + id, {
@@ -47,20 +47,20 @@ const Main = (props) => {
             },
             body: JSON.stringify(mark)
         })
-        // update the list of people
+        // update the list of bookmark
         getBookmarks()
     }
-    // function to delete person
+    // function to delete a bookmark
     const deleteBookmarks = async (id) => {
         // make the delete request
         await fetch(URL + id, {
             method: "delete"
         })
-        // update the list of people
+        // update the list of bookmarks
         getBookmarks()
 
     }
-    // a useEffect to make a call to getPeople when page loads
+    // a useEffect to make a call to getBookmarks when page loads
     useEffect(() => {
         getBookmarks()
     }, [])
