@@ -56,17 +56,17 @@ const Index = (props) => {
 
     if (props.bookmarks) {
         return (
-            <section>
+            <section className="main">
                 {form}
                 {props.bookmarks.map((mark) => {
                     return (
                         <div key={mark._id} className="mark">
-                            <h1>{mark.name}</h1>
+                            {/* <h1>{mark.name}</h1> */}
+                            <a href={mark.url}>{mark.name}</a>
                             <Link to={`/bookmarks/${mark._id}`}>
                                 <button>Edit</button>
-                            </Link><br/>
-                            <a href={mark.url}>Go to {mark.name}</a>
-
+                            </Link>
+                            
                         </div>
                     );
                 })}

@@ -1,0 +1,80 @@
+$red: #720026;
+$orange: #DD6031;
+$darkblue: #18314F;
+$cream: #EFD5C3;
+
+@mixin mainFont($weight) {
+  font-family: 'Open Sans', sans-serif;;
+  font-weight: $weight;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+h2 {
+  padding: 0;
+  margin: 0;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  background-color: $orange;
+  width: 100%;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+}
+
+.App {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+
+  margin: 0em;
+}
+
+body {
+  background-color: $cream;
+}
+
+#textDec {
+  text-decoration: none;
+}
+
+#titleLink {
+  font-size: 1.5em;
+  color: white;
+  text-decoration: none !important;
+  @include mainFont(900)
+}
+
+.loading {
+  border: 2px solid blue;
+  height: 50px;
+  width: 10%;
+  transition: 500ms;
+  animation-name: loading;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+}
+
+@keyframes loading {
+  0% {
+    transform: translateX(0px);
+    width: 10%;
+  }
+  50% {
+    transform: translateX(100px);
+    width: 50%;
+  }
+  100% {
+    transform: translateX(0px);
+    width: 10%;
+  }
+  
+}
