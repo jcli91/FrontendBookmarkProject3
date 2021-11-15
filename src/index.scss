@@ -134,40 +134,20 @@ a {
   font-size: medium;
 }
 
-// body {
-//   background-color: $cream;
-// }
+.is-primary {
+  background-color: $navy !important;
+}
 
-// #textDec {
-//   text-decoration: none;
-// }
+.is-primary:hover {
+  background-color: $red !important;
+  transition: 250ms;
+  transform: scale(1.05);
+  cursor: pointer;
+  border: none;
+}
 
-// .loading {
-//   border: 2px solid blue;
-//   height: 50px;
-//   width: 10%;
-//   transition: 500ms;
-//   animation-name: loading;
-//   animation-iteration-count: infinite;
-//   animation-duration: 2s;
-// }
-
-// @keyframes loading {
-//   0% {
-//     transform: translateX(0px);
-//     width: 10%;
-//   }
-//   50% {
-//     transform: translateX(100px);
-//     width: 50%;
-//   }
-//   100% {
-//     transform: translateX(0px);
-//     width: 10%;
-//   }
-  
-// }
-
-
+.updateButton{
+  color: #dbe1ff
+}
 
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
