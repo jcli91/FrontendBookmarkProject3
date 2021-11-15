@@ -66,7 +66,7 @@ const Show = (props) => {
                 onChange={handleChange}
                 className="input"
                 />
-                 <input type="submit" value="Update Bookmark" className="input"/>
+                 <input type="submit" value="Update Bookmark" className="input is-primary updateButton"/>
             </form>
             );
 
