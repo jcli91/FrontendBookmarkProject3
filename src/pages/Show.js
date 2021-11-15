@@ -56,6 +56,7 @@ const Show = (props) => {
                 name="name"
                 placeholder="name"
                 onChange={handleChange}
+                className="input"
                 />
                 <input
                 type="text"
@@ -63,17 +64,21 @@ const Show = (props) => {
                 name="url"
                 placeholder="URL"
                 onChange={handleChange}
+                className="input"
                 />
-                 <input type="submit" value="Update Bookmark"/>
+                 <input type="submit" value="Update Bookmark" className="input"/>
             </form>
             );
 
             return (
-                <div className="mark">
-                  <h1>{mark.name}</h1>
+                <div className="mark showMark">
+                <div>
+                  <h1 className="showTitle">{mark.name}</h1>
+                  <br/>
                   <h2>{mark.url}</h2>
                   {form}
-                  <button onClick={removeMark}>DELETE</button>
+                  <button className="button is-primary" onClick={removeMark}>DELETE</button>
+                  </div>
             </div>
         );
     } else {
