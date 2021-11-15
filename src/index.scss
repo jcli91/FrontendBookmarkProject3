@@ -1,5 +1,5 @@
 $navy: #464D77;
-$green: #36827F;
+$red: #8A3033;
 $yellow: #F9DB6D;
 $cream: #F4EDED;
 
@@ -61,7 +61,7 @@ html {
 .edit:hover {
   transition: 250ms;
   cursor: pointer;
-  font-size: 1.1em;
+  background-color: #dbe1ff;
 }
 
 .mark {
@@ -72,7 +72,7 @@ html {
 }
 
 .mark:hover {
-  background-color: $green;
+  background-color: $navy;
   transition: 250ms;
   color: white;
   transform: scale(1.05);
@@ -96,15 +96,15 @@ form {
 }
 
 .submit {
-  background-color: $cream;
-  color: rgb(0, 0, 0);
+  background-color: $navy;
+  color: $cream;
 }
 
 .submit:hover {
   transition: 250ms;
   transform: scale(1.05);
   cursor: pointer;
-  background-color: rgba(155, 155, 155, 0.123);
+  background-color: $red;
 }
 
 input {
@@ -119,7 +119,20 @@ a {
   color: #18314F
 }
 
+.showMark:hover {
+  transform: scale(1);
+  background-color: $cream;
+  color: black
+}
 
+.showTitle {
+  font-size: 2em;
+  color: $navy;
+}
+
+.button {
+  font-size: medium;
+}
 
 // body {
 //   background-color: $cream;

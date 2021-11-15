@@ -72,10 +72,13 @@ const Show = (props) => {
 
             return (
                 <div className="mark showMark">
-                  <h1>{mark.name}</h1>
+                <div>
+                  <h1 className="showTitle">{mark.name}</h1>
+                  <br/>
                   <h2>{mark.url}</h2>
                   {form}
-                  <button onClick={removeMark}>DELETE</button>
+                  <button className="button is-primary" onClick={removeMark}>DELETE</button>
+                  </div>
             </div>
         );
     } else {
